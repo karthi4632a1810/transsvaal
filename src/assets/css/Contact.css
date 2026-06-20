@@ -1,0 +1,21 @@
+.puz{
+    background-color: black;
+    aspect-ratio: 1/1;
+    width: 300px;
+    transition: 0.3s;
+  }
+.puz:hover{
+    background-color: var(--primary-color);
+  }
+
+  .map-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .map{
+    height: 500px;
+    border-radius: 1rem;
+    outline: 1px solid var(--primary-color);
+    outline-offset: 5px;
+  }

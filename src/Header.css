@@ -1,0 +1,205 @@
+header {
+    /* background-color: hsl(0, 0%, 0%); */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(0%);
+    width: 100%;
+    z-index: 99;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    isolation: isolate;
+}
+header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -1;
+    transition: 1s;
+}
+@media (width > 1200px) {
+    body:not(.scroll-on-top) header::before{
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    .scroll-on-top header{
+        background-color: hsl(0, 0%, 0%, 0);
+        box-shadow: none;
+    }
+}
+
+header .logo img {
+    height: 50px;
+    transition: 0.3s;
+}
+
+header .navlink {
+    position: relative;
+}
+header .navlink .drop-down{
+    position: absolute;
+    top: calc(100% + 45px);
+    left: -15px;
+    background-color: hsla(0, 0%, 0%, 0.3);
+    backdrop-filter: blur(10px);
+    min-width: max-content;
+    filter:drop-shadow(0 0 5px hsl(0, 0%, 0%));
+    min-width: 250px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.4s;
+}
+
+
+@media (width > 1200px) {
+    header .navlink:hover .drop-down{
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0);
+    }
+    header .navlink .drop-down::before{
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 20px;
+        border: 10px solid transparent;
+        border-bottom-color: hsla(0, 0%, 0%, 0.3);
+        backdrop-filter: blur(10px);
+    }
+    header .navlink .drop-down::after{
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 15px;
+        width: 100px;
+        height: 50px;
+    }
+}
+
+
+header .nav-link-a {
+    color: white;
+}
+
+header .nav-link-a:hover {
+    color: var(--primary-color);
+}
+
+header .nav-link-a.active {
+    color: var(--primary-color);
+}
+
+@media (width > 1200px) {
+
+    .scroll-down header {
+        transform: translateX(-50%) ;
+    }
+}
+
+@media (width > 1200px) {
+
+    .nav-btn {
+        width: 200px;
+    }
+}
+
+@media (width < 1200px) {
+    header {
+        background-color: hsl(0, 0%, 0%);
+        height: 60px;
+    }
+    header .logo img {
+        width: 150px;
+    }
+
+    header .nav-link-a {
+        font-size: 1.2rem;
+    }
+
+    header .navMob {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: hsl(0, 0%, 0%, 0.7);
+        backdrop-filter: blur(10px);
+        transition: 0.5s;
+        clip-path: circle(0px at calc(100% - 25px) 35px);
+    }
+
+    .menu-open header .navMob {
+        clip-path: circle(150% at calc(100% - 25px) 35px);
+    }
+
+
+
+    header .menu {
+        all: unset;
+        background-image: url(https://api.iconify.design/hugeicons:menu-square.svg?color=%23d96b26);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 25px;
+        height: 25px;
+        z-index: 9999;
+        transform: rotate(0deg);
+        transition: 0.5s;
+    }
+
+    .menu-open header .menu {
+        background-image: url(https://api.iconify.design/material-symbols:close-rounded.svg?color=%23d96b26);
+        transform: rotate(-360deg);
+    }
+
+    header .custom-btn {
+        all: unset;
+        color: var(--primary-color);
+        font-size: 1.5rem;
+    }
+
+    header .navlink {
+        width: 100%;
+        transition: 0.3s;
+    }
+    header .navlinks-sub-active > .navlink {
+        transform: translateX(-100%);
+    }
+   
+    header .navlink .show-dropdown{
+       position: absolute;
+       right: 0;
+       top: 50%;
+       height: 100%;
+       width: 30px;
+       background-color:var(--primary-color);
+       mask-image: url(https://api.iconify.design/material-symbols:arrow-forward-ios-rounded.svg);
+       mask-size: contain;
+       mask-position: center;
+       mask-repeat: no-repeat;
+       transform: translateY(-50%) rotate(0deg);
+       transition: 0.3s;
+    }
+    header .navlinks-sub-active .show-dropdown{
+        transform: translateY(-50%) rotate(180deg);
+    }
+    header .navlink .drop-down{
+        opacity: 1;
+        pointer-events: all;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%) translateX(100px);
+        backdrop-filter: none;
+        background: transparent;
+        transition: 0.3s;
+    }
+    header .navlinks-sub-active .drop-down{
+        transform: translateY(-50%) translateX(0px);
+    }
+        
+}

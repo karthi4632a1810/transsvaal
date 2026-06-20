@@ -1,0 +1,946 @@
+.SlideBanner {
+    mask-image: linear-gradient(to top, transparent, black 50%);
+}
+
+@media (width < 1200px) {
+    .SlideBanner video {
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 40%);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+/* About us section */
+div:has(>.about-us-img){
+    position: relative;
+    color: hsl(0, 0%, 80%);
+}
+/* div:has(>.about-us-img)::before{
+    content: "10";
+    font-size: 7rem;
+    font-weight: 700;
+    position: absolute;
+    font-family: fantasy;
+    left: 52.5%;
+    top: 3%;
+}
+div:has(>.about-us-img)::after{
+    content: "Years Experiences";
+    font-size: 1.8rem;
+    font-weight: 700;
+    position: absolute;
+    left:70%;
+    top: 9%;
+    line-height: 1;
+} */
+.about-us-img {
+    filter: drop-shadow(0 0 10px hsl(23, 70%, 10%));
+}
+
+.about-us .icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    /* background-image: linear-gradient(45deg, hsl(23, 70%, 20%), black); */
+    border-radius: 1rem;
+    aspect-ratio: 1/1;
+    width: 180px;
+    transition: 0.5s;
+}
+
+.about-us .about-list:hover .icon {
+    transform: scale(1.3);
+}
+
+.about-us .img {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    background-color: black;
+    border-radius: 50%;
+    outline: 1px solid var(--primary-color);
+}
+
+.service-bg {
+    --s: 700px;
+    background-image:
+        url(/images/service-digital-marketing-1.svg),
+        url(/images/service-digital-marketing-2.svg),
+        url(/images/service-digital-marketing-3.svg),
+        url(/images/service-web-development-1.svg),
+        url(/images/service-web-development-2.svg),
+        url(/images/service-web-development-3.svg),
+        url(/images/service-web-development-4.svg),
+        url(/images/service-ui-ux-1.svg),
+        url(/images/service-ui-ux-2.svg),
+        url(/images/service-ui-ux-3.svg),
+        url(/images/service-mobile-development-1.svg),
+        url(/images/service-mobile-development-2.svg),
+        url(/images/service-mobile-development-3.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left 50% center, left 50% center, left 50% center,
+        left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+        left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+        left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center;
+    width: 100%;
+    aspect-ratio: 1;
+    transition: 0.5s;
+}
+
+.service-bg[data-pos="0"] {
+    animation: service-1 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
+}
+
+.service-bg[data-pos="1"] {
+    animation: service-2 2s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
+}
+
+.service-bg[data-pos="2"] {
+    animation: service-3 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
+}
+
+.service-bg[data-pos="3"] {
+    animation: service-4 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
+}
+
+@keyframes service-1 {
+    0% {
+        background-size: 100%, 100%, 0%;
+        background-position: left calc(1 * var(--s)) center, top calc(1 * var(--s)) center, left 0% center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center;
+
+    }
+
+    30% {
+        background-size: 100%, 100%, 0%;
+        background-position: left calc(1 * var(--s)) center, left 50% center, left 50% center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center;
+    }
+
+    75% {
+        background-size: 100%, 100%, 0%;
+        background-position: left 50% center, left 50% center, left 50% center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center;
+    }
+
+    100% {
+        background-size: 100%, 100%, 100%;
+    }
+}
+
+@keyframes service-2 {
+    0% {
+        background-position:
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(-1 * var(--s)) center, top calc(1 * var(--s)) center, left calc(1 * var(--s)) center, top calc(-2 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center;
+    }
+
+    25% {
+        background-position:
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(-1 * var(--s)) center, top calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left 50% center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center;
+    }
+
+    50% {
+        background-position:
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(-1 * var(--s)) center, left 50% center, left calc(1 * var(--s)) center, left 50% center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center;
+    }
+
+    75% {
+        background-position:
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(-1 * var(--s)) center, left 50% center, left 50% center, left 50% center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center;
+    }
+
+    100% {
+        background-position:
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left 50% center, left 50% center, left 50% center, left 50% center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center;
+    }
+}
+
+@keyframes service-3 {
+    0% {
+        background-position: left calc(1 * var(--s)) center, top calc(1 * var(--s)) center, top calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(-1 * var(--s)) center, top calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center;
+    }
+
+    30% {
+        background-position: left calc(1 * var(--s)) center, top calc(1 * var(--s)) center, top calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(-1 * var(--s)) center, left 100% center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center;
+    }
+
+    75% {
+        background-position: left calc(1 * var(--s)) center, top calc(1 * var(--s)) center, top calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left 100% center, left 100% center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center;
+    }
+
+    100% {
+        background-position: left calc(1 * var(--s)) center, top calc(1 * var(--s)) center, top calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left 100% center, left 100% center, left 100% center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center;
+    }
+}
+
+@keyframes service-4 {
+    0% {
+        background-position: left calc(1 * var(--s)) center, top calc(1 * var(--s)) center, top calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(-1 * var(--s)) center, top calc(1 * var(--s)) center,
+            top calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(-1 * var(--s)) center;
+    }
+
+    30% {
+        background-position: left calc(1 * var(--s)) center, top calc(1 * var(--s)) center, top calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(-1 * var(--s)) center, top calc(1 * var(--s)) center,
+            top calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left 50% center;
+    }
+
+    75% {
+        background-position: left calc(1 * var(--s)) center, top calc(1 * var(--s)) center, top calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(-1 * var(--s)) center, top calc(1 * var(--s)) center,
+            top calc(1 * var(--s)) center, left 50% center, left 50% center;
+    }
+
+    100% {
+        background-position: left calc(1 * var(--s)) center, top calc(1 * var(--s)) center, top calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center, left calc(1 * var(--s)) center,
+            left calc(1 * var(--s)) center, left calc(-1 * var(--s)) center, top calc(1 * var(--s)) center,
+            left 50% center, left 50% center, left 50% center;
+    }
+}
+
+@keyframes bounceUp {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0) scaleY(1);
+    }
+
+    40% {
+        transform: translateY(-30px) scaleY(1.1);
+    }
+
+    60% {
+        transform: translateY(-15px) scaleY(0.9);
+    }
+}
+
+.service .dis-grid .service-items .icon {
+    font-size: 2.5rem;
+    color: white;
+    background-image: linear-gradient(45deg, hsl(23, 70%, 5%), hsl(23, 70%, 5%), black, hsl(0, 0%, 10%), black);
+    background-size: 250%;
+    background-position: right;
+    border-radius: 1rem;
+    aspect-ratio: 1/1;
+    width: 150px;
+    transition: 0.5s;
+}
+
+.service .dis-grid .service-items {
+    cursor: pointer;
+}
+
+.service .dis-grid .service-items.active .icon {
+    background-position: left;
+    color: var(--primary-color);
+}
+
+.service .dis-grid .service-items.active h5 {
+    color: var(--primary-color);
+}
+
+.service .dis-grid .service-items {
+    opacity: 0.75;
+    transition: 0.3s;
+}
+
+@media (width > 1200px) {
+    .service .dis-grid .service-items.active {
+        opacity: 1;
+        transform: translateX(30px);
+    }
+}
+
+@media (width < 1200px) {
+    .service .dis-grid .service-items .icon {
+        font-size: 1.5rem;
+        width: 60px;
+    }
+
+    .service .dis-grid .service-items.active {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+}
+
+/* digitalMarketing */
+.digitalMarketing {
+    background-color: var(--primary-color);
+    overflow: hidden;
+    transform: rotate(-2deg);
+}
+
+.digitalMarketing .marquee {
+    position: relative;
+}
+
+.digitalMarketing .marquee .marquee-group {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: max-content;
+    text-transform: uppercase;
+    font-weight: 700;
+    animation: scrollText 30s linear infinite;
+}
+
+.digitalMarketing-content {
+    height: 100vh;
+    /* background-image: url(/public/images/digital-marketing-bg.jpg); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0) translateY(-50%);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+}
+
+/* Why choose us section */
+.why-choose-us .why {
+    background-color: hsla(0, 0%, 0%, 0.5);
+    transition: 0.3s;
+    outline: 1px solid hsl(0, 0%, 10%);
+}
+
+.why-choose-us .why:hover {
+    background-color: hsl(23, 70%, 46%);
+}
+
+.why-choose-us .why .icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+
+.why-choose-us .why:hover .icon {
+    color: white;
+}
+
+.why-choose-us .why:first-child {
+    border-top-left-radius: 2rem;
+}
+
+.why-choose-us .why:last-child {
+    border-bottom-right-radius: 2rem;
+}
+
+@media (width < 1200px) {
+    .why-choose-us .why:nth-child(2) {
+        border-top-right-radius: 2rem;
+    }
+
+    .why-choose-us .why:last-child {
+        border-bottom-left-radius: 2rem;
+    }
+}
+
+/* testmonial */
+.testimoial .testimonials-box {
+    position: absolute;
+    left: 63%;
+    top: 8%;
+    width: 30vw;
+    max-width: 450px;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(3px);
+    min-height: 250px;
+}
+
+.testimoial .testimonials-box::before {
+    content: "";
+    position: absolute;
+    right: 5%;
+    top: 0%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-image: url(https://api.iconify.design/ph:quotes-fill.svg?color=%23c76223);
+    background-size: contain;
+}
+
+@media (width < 900px) {
+    .testimoial .testimonials-box {
+        width: 60vw;
+    }
+}
+
+.testimoial .testimonials-box .testimonials {
+    display: none;
+}
+
+.testimoial .testimonials-box .testimonials.active {
+    display: flex;
+}
+
+
+.testimoial .testimonials-box .testimonials .stars {
+    height: 20px;
+    width: 100px;
+    background-image: url(https://api.iconify.design/ic:round-star.svg?color=white);
+    background-position: left center;
+    background-size: 20px;
+    background-repeat: repeat-x;
+    position: relative;
+    animation: popUp 1s ease-out forwards;
+}
+
+.testimoial .testimonials-box .testimonials .stars::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc((100% / 5) * var(--rating));
+    height: 100%;
+    background-image: url(https://api.iconify.design/ic:round-star.svg?color=%23c76223);
+    background-position: left center;
+    background-size: 20px;
+    background-repeat: repeat-x;
+}
+
+.testimoial .testimonials-box .testimonials p {
+    animation: popUp 1s ease-out forwards;
+}
+
+@keyframes popUp {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+}
+
+.testimoial .testimonial-img {
+    width: 100%;
+    aspect-ratio: 203.9/367.11;
+    background-image: url(/images/testimonial-body.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    position: relative;
+}
+
+.testimoial .testimonial-img::before {
+    content: "";
+    position: absolute;
+    top: 14%;
+    left: 46%;
+    width: calc((100% / 219.54) * 83.69);
+    aspect-ratio: 83.69/104.94;
+    background-image: url(/images/testimonial-right-hand.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+    animation: leftHand 1s infinite alternate;
+    transform-origin: left top;
+}
+
+@keyframes leftHand {
+    0% {
+        transform: rotate(-1deg);
+    }
+
+    100% {
+        transform: rotate(1deg);
+    }
+}
+
+.testimoial .liee {
+    content: "";
+    position: absolute;
+    left: 75%;
+    top: 40%;
+    width: 2px;
+    height: 30%;
+    border-radius: 100vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform-origin: left top -100px;
+    animation: testi-line 1s infinite alternate;
+    z-index: 1;
+}
+
+@keyframes testi-line {
+    0% {
+        transform: translateX(-50%) rotate(-1deg);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 2px)) rotate(1deg);
+    }
+}
+
+.testimoial .profile {
+    position: absolute;
+    left: 75%;
+    top: 60%;
+    width: 75px;
+    height: 75px;
+    border-radius: 100vw;
+    transform: translateX(-50%);
+    background-color: black;
+    transform-origin: left top -500px;
+    animation: testi-profile 1s infinite alternate;
+    outline: 1px solid var(--primary-color);
+    background-image: var(--bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+    transition: 0.5s
+}
+
+@keyframes testi-profile {
+    0% {
+        transform: translateX(calc(-50%)) rotate(-1deg);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 5px)) rotate(1deg);
+    }
+}
+
+.testimoial .profile::after {
+    content: attr(data-name);
+    position: absolute;
+    left: 120%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: max-content;
+
+}
+
+.testimoial .testimonial-img::after {
+    content: "";
+    position: absolute;
+    top: 5.8%;
+    left: 86.5%;
+    width: calc((100% / 219.54) * 44.81);
+    aspect-ratio: 44.81/27.18;
+    background-image: url(/images/testimonial-left-hand.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+@media (width < 1200px) {
+    .testimoial .profile {
+        top: 100%;
+    }
+
+    .testimoial .liee {
+        height: 70%;
+    }
+}
+
+.profile-img {
+    width: 50px;
+    aspect-ratio: 1/1;
+    background-image: var(--bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50% !important;
+    outline: 1px solid var(--primary-color);
+}
+
+/* call to action */
+.custom-btn.loading span{
+    display: none;
+}
+.custom-btn.loading{
+    background-image: url(https://api.iconify.design/eos-icons:three-dots-loading.svg?color=white);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+    pointer-events: none;
+}
+.cta .cta-img {
+    position: relative;
+    isolation: isolate;
+}
+
+.cta .cta-img .mobile-frame {
+    width: 43%;
+    aspect-ratio: 196.2/369.52;
+    background-image: url(/images/cta-mob.svg);
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    z-index: 1;
+}
+.cta.sended .cta-img .mobile-frame::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top:56%;
+    width: 88%;
+    height: 80%;
+    background-color: hsl(0, 0%, 10%);
+    background-image: url(/images/cta-thankyou.svg);
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50% , -50%);
+    z-index: 5;
+}
+@media (width < 1000px) {
+    .cta .cta-img .mobile-frame {
+        width: 80%;
+        aspect-ratio: 196.2/369.52;
+        background-image: url(/images/cta-mob.svg);
+        background-size: contain;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10%;
+        z-index: 1;
+    }
+
+    .cta {
+        margin-top: 15rem;
+    }
+}
+
+@media (width > 1000px) {
+
+    .cta .cta-img .cta-character {
+        position: absolute;
+        left: 8%;
+        bottom: 10%;
+        width: 20%;
+        aspect-ratio: 101.56/288.73;
+        background-image: url(/images/cta-body.svg);
+        background-size: contain;
+        z-index: 3;
+        transition: 0.5s;
+    }
+
+    .cta .cta-img .cta-character::after {
+        content: "";
+        position: absolute;
+        left: 25%;
+        bottom: 60%;
+        width: 100%;
+        aspect-ratio: 96.79/57.08;
+        background-image: url(/images/cta-right-hand.svg);
+        background-size: contain;
+        z-index: 3;
+        transform: rotate(40deg);
+        transform-origin: left top;
+        transition: 0.5s;
+    }
+
+    .cta .cta-img:has(#cta-name:focus) .cta-character::after {
+        transform: rotate(-37deg);
+    }
+
+    .cta .cta-img:has(#cta-email:focus) .cta-character::after {
+        transform: rotate(-10deg);
+    }
+
+    .cta .cta-img:has(#cta-num:focus) .cta-character::after {
+        transform: rotate(20deg);
+    }
+
+
+
+    .cta .cta-img .left-hand {
+        content: "";
+        position: absolute;
+        left: 16%;
+        bottom: 47%;
+        width: 18%;
+        aspect-ratio: 75.57/60.53;
+        background-image: url(/images/cta-left-hand.svg);
+        background-size: contain;
+        z-index: -1;
+        transform: rotate(20deg);
+        transform-origin: 10% 46%;
+        transition: 0.5s;
+        transform: rotate(calc(var(--valid, 0) * -45deg));
+    }
+
+    .cta .cta-img:has(#cta-name:valid):has(#cta-email:valid):has(#cta-num:valid) .left-hand {
+        --valid: 1;
+        left: 14%;
+    }
+
+    .cta.sended  .cta-img .left-hand {
+        transform: rotate(45deg);
+        left: 17% !important;
+        z-index: 2;
+    }
+
+}
+
+.cta .cta-img:not(:has(#cta-name:valid):has(#cta-email:valid):has(#cta-num:valid)) button {
+    filter: grayscale(1);
+    pointer-events: none;
+}
+
+.cta input,
+.cta select {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid white !important;
+    box-shadow: none !important;
+    color: rgba(245, 245, 245, 0.9) !important;
+    max-height: 100px;
+}
+
+.cta select option {
+    background: black;
+}
+
+.cta input:valid,
+.cta select:valid {
+    border-bottom: 1px solid var(--primary-color) !important;
+}
+
+.cta label {
+    color: var(--primary-color) !important;
+}
+
+.cta label::after {
+    background: transparent !important;
+}
+
+/* blog */
+.blog {
+    background-color: black;
+    box-shadow: 0 0 100vw 100vw black;
+    clip-path: polygon(-100vw 0, 100vw 0, 100vw 100%, -100vw 100%);
+}
+
+.blog .swiper-pagination span {
+    background-color: var(--primary-color);
+}
+
+.blog .swiper-button-prev,
+.blog .swiper-button-next {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    top: 2rem;
+    left: auto !important;
+    right: 5rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 100vw;
+    mask-image: url(https://api.iconify.design/material-symbols:arrow-back-ios-rounded.svg?color=white);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.blog .swiper-button-prev::after,
+.blog .swiper-button-next::after {
+    content: none;
+}
+
+.blog .swiper-button-next {
+    transform: translateX(150%);
+    mask-image: url(https://api.iconify.design/material-symbols:arrow-forward-ios-rounded.svg?color=white);
+}
+
+.blog-box {
+    background-color: hsl(0, 0%, 5%);
+}
+
+.blog-box p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.blog-box .blog-link {
+    position: relative;
+    text-decoration: none;
+    color: hsl(0, 0%, 86%);
+    background: linear-gradient(45deg, hsl(23, 70%, 30%), hsl(23, 70%, 45%), hsl(23, 70%, 55%));
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 1.25em;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.blog-box .blog-link span {
+    position: relative;
+    z-index: 1;
+}
+
+.blog-box .blog-link::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: #272727;
+    border-radius: 9px;
+    transition: 0.5s;
+}
+
+.blog-box .blog-link:hover::before {
+    opacity: 0.7;
+}
+
+.blog-box .blog-link::after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(45deg, hsl(23, 70%, 30%), hsl(23, 70%, 45%), hsl(23, 70%, 55%));
+    border-radius: 9px;
+    transition: 0.5s;
+    opacity: 0;
+    filter: blur(20px);
+}
+
+.blog-box .blog-link:hover:after {
+    opacity: 1;
+}
+
+/* team */
+.team .team-box .team-profile {
+    width: 100%;
+    aspect-ratio: 161/202;
+    background-color: black;
+
+    background-image: url(https://wallpapers.com/images/featured/emma-watson-pictures-7b6totzcg2bp1o7c.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    mask-image: url(/images/team-1.svg);
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: bottom center;
+
+    position: relative;
+    isolation: isolate;
+    transition: 0.3s;
+}
+
+@media (width > 1200px) {
+    .team .team-box:nth-child(1) .team-profile {
+        translate: 22% 0px;
+    }
+
+    .team .team-box:nth-child(3) .team-profile {
+        translate: -22% 0px;
+    }
+}
+
+.team .team-box:nth-child(2) .team-profile {
+    mask-image: url(/images/team-2.svg);
+    background-image: url(https://i.guim.co.uk/img/media/808b031d10688602deb60849458557ee2a714992/1141_94_4025_2415/master/4025.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=26fb24ef5ee6c8a55083613588f3bc16);
+    background-position: top center;
+}
+
+.team .team-box:nth-child(3) .team-profile {
+    mask-image: url(/images/team-3.svg);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwyKuOjtzGZ3-gqmHBSh_ggfAuzW79e0SqWA&s);
+}
+
+.team .team-box .team-profile::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, black, transparent);
+    z-index: -1;
+}
+
+.team .team-box .team-profile:hover {
+    transform: scale(1.1);
+}
+
+.team:hover .team-box:nth-child(1) .team-profile,
+.team:hover .team-box:nth-child(3) .team-profile {
+    translate: 0px 0px !important;
+}
+.team .team-box .team-profile .socials {
+    position: absolute;
+    right: 1rem;
+    top: 12%;
+    width: 2rem;
+    height: 6rem;
+    background-color: white;
+}
